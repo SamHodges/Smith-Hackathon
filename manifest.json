@@ -1,5 +1,14 @@
 {
   "manifest_version": 2,
   "name": "Google docs hopeful",
-  "version": "0.1"
+  "version": "0.1",
+
+  "content_scripts": [
+	  {
+		"matches": [
+		  "https://docs.google.com/*"
+		],
+		"js": ["content.js"]
+	  }
+	]
 }
