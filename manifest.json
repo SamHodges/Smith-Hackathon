@@ -1,14 +1,19 @@
 {
-  "manifest_version": 2,
-  "name": "Google docs hopeful",
-  "version": "0.1",
+	"name": "google doc ext",
+	"description" : "extension",
+	"version": "0.1.0",
+	"manifest_version":2,
+	//"icons":{}
+	"background": {
+		"scripts": ["./background.js"]
+	},
+	"options_page":"./options.html",
+	"browser_action":{
+		"default_popup":"popup.html"
+	},
+	"permissions":[
+		"tabs",
+		"https://www.google.come/*",
+		"storage"]
 
-  "content_scripts": [
-	  {
-		"matches": [
-		  "https://docs.google.com/*"
-		],
-		"js": ["content.js"]
-	  }
-	]
 }
