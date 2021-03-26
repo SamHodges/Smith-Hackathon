@@ -6,7 +6,7 @@ first.id = "first";
 
 const second = document.createElement('button');
 second.innerText = "SHOUTOUT TO BACKEND";
-first.id = "second";
+second.id = "second";
 
 document.querySelector('body').appendChild(first);
 document.querySelector('body').appendChild(second);
