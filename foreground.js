@@ -17,6 +17,7 @@ first.addEventListener('click', () => {
 second.addEventListener('click', () => {
 	chrome.runtime.sendMessage({message: 'yo check the storage'});
 	console.log("I SENT THE MESSAGE");
+	window.open('https://docs.google.com/document/create')
 });
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse)=> {
