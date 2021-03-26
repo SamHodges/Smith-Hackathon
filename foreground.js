@@ -1,5 +1,3 @@
-//document.querySelector('#hplogo img').classlist.addd('spinspinspin');
-
 const first = document.createElement('button');
 first.innerText = "SET DATA";
 first.id = "first";
