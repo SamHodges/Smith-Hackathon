@@ -1,23 +1,40 @@
-const first = document.createElement('button');
-first.innerText = "SET DATA";
-first.id = "first";
+const paste = document.createElement('button');
+paste.innerText = "PASTE";
+paste.id = "paste";
 
-const second = document.createElement('button');
-second.innerText = "SHOUTOUT TO BACKEND";
-second.id = "second";
+const copy = document.createElement('button');
+copy.innerText = "COPY";
+copy.id = "copy";
 
-document.querySelector('body').appendChild(first);
-document.querySelector('body').appendChild(second);
+var titles;
 
-first.addEventListener('click', () => {
-	chrome.storage.local.set({"password": 123});
-	console.log("I SET DATA");
+document.querySelector('body').appendChild(paste);
+document.querySelector('body').appendChild(copy);
+
+paste.addEventListener('click', () => {
+	var i;
+	var insert = ""; 
+	var x = document.getElementsByClassName("goog-inline-block");
+	for (i = 0; i < titles.length; i++) {
+  		insert = title[i] + "<br>";
+  		//sort according to header types
+
+	}
 });
 
-second.addEventListener('click', () => {
+copy.addEventListener('click', () => {
 	chrome.runtime.sendMessage({message: 'yo check the storage'});
 	console.log("I SENT THE MESSAGE");
-	window.open('https://docs.google.com/document/create')
+	//open new window
+	var newWindow = window.open('https://docs.google.com/document/create');
+
+	//document.onload = updateText(){ 
+		console.log("yipeeeeee")
+		new_html = "testing testing is this working";
+		var x = document.getElementsByClassName("goog-inline-block");
+		x[0].innerHTML = new_html;
+		console.log(x);
+	//};
 });
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse)=> {

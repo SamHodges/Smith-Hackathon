@@ -1,26 +1,31 @@
-.spinspinspin{
-	animation-name: spin;
-	animation-duration: 1.0s;
-	animation-iteration-count: infinite;
-}
-
-@keyframes spin{
-	0%{
-		transform: rotate(0deg);
-	}
-	100%{
-		transform:rotate(1440deg);
-	}
-}
-
-#second{
+#paste{
 	position: absolute;
-	top: 20%;
-	left: 20%;
+	top: 19.5%;
+	left: 15%;
+	background-color: #555555;
+	color: #FFFFFF;
+	transition-duration: 0.4s;
+  	cursor: pointer;
 }
 
-#first{
-	position: absolute;
-	top: 30%;
-	left: 40%;
+#paste:hover{
+	background-color: #4CAF50; /* Green */
+	color: white;
 }
+
+#copy{
+	position: absolute;
+	top: 19.5%;
+	left: 7.5%;
+	background-color: #555555;
+	color: #FFFFFF;
+	transition-duration: 0.4s;
+  	cursor: pointer;
+}
+
+#copy:hover{
+	background-color: #4CAF50; /* Green */
+	color: white;
+}
+
+
