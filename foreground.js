@@ -33,11 +33,14 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse)=> {
 function pasting(){
 	var i;
 	var insert = ""; 
-	var x = document.getElementsByClassName("goog-inline-block");
+	var x = document.getElementsByClassName("goog-inline-block kix-lineview-text-block");
+
+
+	titles = ["header 1", "header 2", "header 3"];
 	for (i = 0; i < titles.length; i++) {
-  		insert = title[i] + "<br>";
+  		insert = insert + titles[i] + "<br>";
   		//sort according to header types
 	}
-	x[0].innerHTML = insert;
+	x[0].innerHTML = insert + '<span class="goog-inline-block" style="width:7.877604007720947px;height:16.865234375px">&nbsp;</span>"';
 	console.log(insert);
 }
